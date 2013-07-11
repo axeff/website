@@ -534,6 +534,7 @@ and (max-width : 480px) {
     body, .frame {
         width: 100%;
         height: inherit;
+        margin: 0;
     }
 
 
@@ -559,7 +560,7 @@ and (max-width : 480px) {
         width: inherit;
     }
 
-    .magi .navi li {
+    .magi .navi > ul > li {
         float: left;
         width: 33.333333%;
         text-align: center;
