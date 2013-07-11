@@ -1,0 +1,5 @@
+
+li,ul {height:1em; } /* fix damn whitespace bug */ 
+.magi{
+	margin: 0 10px;
+}
