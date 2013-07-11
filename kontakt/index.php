@@ -48,7 +48,7 @@ if (is_array($data)){
 
                   <li> <a href="/">Home</a> </li>
                   <li> <a href="/projekte/">Projekte</a> </li>
-                  <li> <a class="active" href="/kontakt/">Kontakt</a> </li>
+                  <li class="active"> <a href="/kontakt/">Kontakt</a> </li>
                   
                   
                   

@@ -29,7 +29,7 @@
                 <!--Navigation-->
                 <ul>
 
-                  <li> <a class="active" href="/">Home</a> </li>
+                  <li class="active"> <a href="/">Home</a> </li>
                   <li> <a href="/projekte/">Projekte</a> </li>
                   <li> <a href="/kontakt/">Kontakt</a> </li>
                   
@@ -83,9 +83,7 @@
 						
 							<ul>
 							  <li>
-								<p>
-							      Masterarbeit: <span class="italic">Prototypische Entwicklung und vergleichende Analyse der Gebrauchstauglichkeit nativer und plattform&uuml;bergreifender Implementierungen anhand ausgew&auml;hlter Funktionen nach EN ISO 9241-11 f&uuml;r mobile Endger&auml;te</span>
-								</p>
+                                  Masterarbeit: <span class="italic">Prototypische Entwicklung und vergleichende Analyse der Gebrauchstauglichkeit nativer und plattform&uuml;bergreifender Implementierungen anhand ausgew&auml;hlter Funktionen nach EN ISO 9241-11 f&uuml;r mobile Endger&auml;te</span>
 							  </li>
 							  <li>
 							      Freier Web(-App) Developer für Affinitas (eDarling/BetterDate), HGV Publishing Services, Wirtschaftskammer Baselland (Schweiz), mx|Byte, yousign GmbH 
@@ -96,9 +94,6 @@
 							  <li>
 							      Bachelorarbeit: <span class="italic">Konzeption und Entwicklung eines Navigationssystems für mobile Endgeräte auf der Basis von Java. (2007)</span>
 							  </li>
-						  
-
-
 							</ul>
 						
 							<br>
