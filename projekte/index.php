@@ -17,7 +17,7 @@ $num_projects = 4;
 		<script type="text/javascript" src="../js/cufon-yui.js"></script>
 		<script type="text/javascript" src="../js/DistrictThin_400.font.js"></script>
 		<script type="text/javascript" src="../js/reflection.js"></script>
-		<script type="text/javascript" src="../js/lib.js"></script>
+		<script type="text/javascript" src="../js/ugla-slider.js"></script>
 		<script>
 			Cufon.replace('.navi a, .magi h1');
 		</script>	
@@ -106,7 +106,7 @@ $num_projects = 4;
 							<table>
 								<tr>
 									<td>
-										<a href="http://itunes.apple.com/de/app/edarling-partnersuche/id493256673?mt=8" target="_blank"><img class="reflect rheight10" src="projectpix/project1.jpg" width="300px"/>	</a>
+										<a href="http://itunes.apple.com/de/app/edarling-partnersuche/id493256673?mt=8" target="_blank"><img class="reflect rheight10" src="projectpix/project1.jpg" />	</a>
 									</td>
 									<td class="top">
 										<h3>PR-Agentur GoSee (www.gosee.de)</h3>
@@ -132,7 +132,7 @@ $num_projects = 4;
 							<table>
 								<tr>
 									<td>
-										<a href="http://www.gosee.de/" target="_blank"><img class="reflect rheight10" src="projectpix/project2.jpg" width="300px"/>	</a>
+										<a href="http://www.gosee.de/" target="_blank"><img class="reflect rheight10" src="projectpix/project2.jpg" />	</a>
 									</td>
 									<td class="top">
 										<h3>PR-Agentur GoSee (www.gosee.de)</h3>
@@ -155,7 +155,7 @@ $num_projects = 4;
 							<table>
 								<tr>
 									<td>
-										<a href="http://www.langer-blomqvist.de/" target="_blank"><img class="reflect rheight10" src="projectpix/project3.jpg" width="300px"/>	</a>
+										<a href="http://www.langer-blomqvist.de/" target="_blank"><img class="reflect rheight10" src="projectpix/project3.jpg" />	</a>
 									</td>
 									<td class="top">
 										<h3>Buchhandel (www.langer-blomqvist.de)</h3>
@@ -177,7 +177,7 @@ $num_projects = 4;
 							<table>
 								<tr>
 									<td>
-										<a href="http://www.harzi-werbung.de/" target="_blank"><img class="reflect rheight10" src="projectpix/project4.jpg" width="300px"/>	</a>
+										<a href="http://www.harzi-werbung.de/" target="_blank"><img class="reflect rheight10" src="projectpix/project4.jpg" />	</a>
 									</td>
 									<td class="top">
 										<h3>Werbetechnik Harzendorf (www.harzi-werbung.de)</h3>
@@ -199,7 +199,7 @@ $num_projects = 4;
 							<table>
 								<tr>
 									<td>
-										<a href="http://www.mybeautycase.de/" target="_blank"><img class="reflect rheight10" src="projectpix/project5.jpg" width="300px"/>	</a>
+										<a href="http://www.mybeautycase.de/" target="_blank"><img class="reflect rheight10" src="projectpix/project5.jpg" />	</a>
 									</td>
 									<td class="top">
 										<h3>goFeminin (www.mybeautycase.de)</h3>
@@ -233,7 +233,13 @@ $num_projects = 4;
 			
 		</div> 
 		<!-- Ende Rahmen um alle Inhalte der Seite-->
-
+        <script>
+            $("#projects").uglaSlide({
+                left: $("#left"),
+                right: $("#right"),
+                speed: "0.5s",
+            });
+        </script>
         
 	</body>
 
