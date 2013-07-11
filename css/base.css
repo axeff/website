@@ -515,3 +515,86 @@ width:90px;
 	bottom:				0;
 	right:				0;
 }
+
+
+
+/****************************************************/
+/* Smartphones (portrait and landscape) ----------- */
+/****************************************************/
+
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
+
+    body, .frame {
+        width: 100%;
+        height: inherit;
+    }
+
+
+    .logo{
+        /*position: absolute;
+        top: -25px;*/
+    }
+
+    .magi {
+        width: inherit;
+        float: none;
+        /*position: fixed;*/
+        margin-bottom: 3em;
+        margin-left: 0;
+        height: auto;
+    }
+
+    .magi .navi {
+        height: auto;
+    }
+
+    .magi .navi ul {
+        width: inherit;
+    }
+
+    .magi .navi li {
+        float: left;
+        width: 33.333333%;
+        text-align: center;
+
+    }
+
+    .magi .navi li:first-child{
+        text-align: left;
+    }
+
+    .magi .navi li:last-child{
+        text-align: right;
+    }
+
+    .contentteaser, .contentteaser .text{
+        width: inherit;
+        float: none;
+        height: inherit;
+    }
+
+    .contentteaser .text {
+        width: 96%;
+        padding: 0 2%;
+    }
+
+    .contentteaser .title {
+        display: none;
+    }
+
+    .projects .sub {
+        display: none;
+    }
+
+
+    .contact #contact {
+        border: none;
+    }
+
+    .contact .title {
+        display: block;
+    }
+
+}

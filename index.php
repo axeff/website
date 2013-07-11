@@ -14,7 +14,7 @@
 		<!--[if ie 6]><style type="text/css">@import url("css/ie6.css");</style><![endif]--> 
 	</head>
 	
-	<body>
+	<body class="main">
 		<!--Rahmen um alle Inhalte der Seite-->
 	<div class ="frame"> 
 			<!--Spalte für Logo und Navigation-->
