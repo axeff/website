@@ -69,6 +69,11 @@
 
 	var move = function(direction) {
 
+        $.event.trigger({
+            type: "uglaSlide",
+            direction: direction
+        });
+
 		$self.each(function(){
 			var pos = $(this).position().left;
 		

@@ -40,7 +40,7 @@ $num_projects = 4;
                 <ul>
 
                   <li> <a href="/">Home</a> </li>
-                  <li> <a class="active" href="/projekte/">Projekte</a> </li>
+                  <li class="active"> <a href="/projekte/">Projekte</a> </li>
                   <div class="sub">
                   	<?
                   		if (strlen($_GET['p'])){
@@ -49,11 +49,11 @@ $num_projects = 4;
                   		
                   	?>
 					<ul id="projectssubmenu">
-						<li><a class="item-1 <?=!strlen($_GET['p']) || $_GET['p'] == "1" ? "active" : ""?>" href="/projekte/?p=1">eDarling/BetterDate</a></li>
-						<li><a class="item-2 <?=$active['2']?>" href="/projekte/?p=2">gosee.de</a></li>
-						<li><a class="item-3 <?=$active['3']?>" href="/projekte/?p=3">langer-blomqvist.de</a></li>
-						<li><a class="item-4 <?=$active['4']?>" href="/projekte/?p=4">harzi-werbung.de</a></li>
-						<li><a class="item-5 <?=$active['5']?>" href="/projekte/?p=5">mybeautycase.de</a></li>
+						<li class="<?=!strlen($_GET['p']) || $_GET['p'] == "1" ? "active" : ""?>"><a class="item-1" href="/projekte/?p=1">eDarling/BetterDate</a></li>
+						<li class="<?=$active['2']?>"><a class="item-2" href="/projekte/?p=2">gosee.de</a></li>
+						<li class="<?=$active['3']?>"><a class="item-3" href="/projekte/?p=3">langer-blomqvist.de</a></li>
+						<li class="<?=$active['4']?>"><a class="item-4" href="/projekte/?p=4">harzi-werbung.de</a></li>
+						<li class="<?=$active['5']?>"><a class="item-5" href="/projekte/?p=5">mybeautycase.de</a></li>
 					</ul>
                   </div>
                   
@@ -234,11 +234,39 @@ $num_projects = 4;
 		</div> 
 		<!-- Ende Rahmen um alle Inhalte der Seite-->
         <script>
-            $("#projects").uglaSlide({
-                left: $("#left"),
-                right: $("#right"),
-                speed: "0.5s",
+            $(document).ready(function(){
+                $("#projects").uglaSlide({
+                    left: $("#left"),
+                    right: $("#right"),
+                    speed: "0.5s",
+                });
+
+                $(document).bind("uglaSlide", function(event){
+
+                    var $active = $("#projectssubmenu li.active");
+                    if (event.direction == 'left'){
+
+                        if (!$active.prev().length){
+                            $('#projectssubmenu li:last').addClass("active");
+                        }else {
+                            $active.prev().addClass("active");
+                        }
+
+                    }else{
+                        if (!$active.next().length){
+                            $('#projectssubmenu li:first').addClass("active");
+                        }else {
+                            $active.next().addClass("active");
+                        }
+                    }
+                    $active.removeClass("active");
+
+                    //redraw
+                    Cufon.replace('.navi a');
+                });
+
             });
+
         </script>
         
 	</body>
