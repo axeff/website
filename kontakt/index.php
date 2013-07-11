@@ -115,9 +115,9 @@ if (is_array($data)){
            
 		  <div class ="title"> 
 			<h4>Axel Freudiger
-				<br/>Neue Bahnhofstr. 4
-				<br/>10245 Berlin
-				<br/>Tel.: 03045030847
+				<br/>Richard-Sorge-Str. 58
+				<br/>10249 Berlin
+				<br/>Tel.: +49 (0)179 911 62 65
 			</h4>
 		  </div>
 
