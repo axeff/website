@@ -10,13 +10,15 @@ $num_projects = 4;
 
 <html>
 	<head>
-	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 		<title>Axel Freudiger &middot; Mediastudent &middot; PROJEKTE</title>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="../css/base.css" />
 		<script type="text/javascript" src="../js/jquery-1.4.1.min.js"></script>
 		<script type="text/javascript" src="../js/cufon-yui.js"></script>
 		<script type="text/javascript" src="../js/DistrictThin_400.font.js"></script>
-		<script type="text/javascript" src="../js/reflection.js"></script>
+		<!--<script type="text/javascript" src="../js/reflection.js"></script>-->
 		<script type="text/javascript" src="../js/ugla-slider.js"></script>
 		<script>
 			Cufon.replace('.navi a, .magi h1');
@@ -109,13 +111,13 @@ $num_projects = 4;
 										<a href="http://itunes.apple.com/de/app/edarling-partnersuche/id493256673?mt=8" target="_blank"><img class="reflect rheight10" src="projectpix/project1.jpg" />	</a>
 									</td>
 									<td class="top">
-										<h3>PR-Agentur GoSee (www.gosee.de)</h3>
+										<h3>eDarling/BetterDate (heute: Shop A Man)</h3>
 										<a target="_blank" href="http://itunes.apple.com/de/app/edarling-partnersuche/id493256673?mt=8">zur App (iOS)</a>
 										<a target="_blank" href="https://play.google.com/store/apps/details?id=net.edarling.mobile">zur App (Android)</a>
-										
+
 										<p>
-											Für <a style="padding:0px;" href="http://affinitas.de/" target="_blank">Affinitas</a> war ich mitverantwortlich für die Entwicklung der mobilen Applications für eDarling und betterDate.									
-											
+											Für <a style="padding:0px;" href="http://affinitas.de/" target="_blank">Affinitas</a> war ich mitverantwortlich für die Entwicklung der mobilen Applications für eDarling und betterDate.
+
 										</p>
 									</td>
 								</tr>
@@ -224,7 +226,10 @@ $num_projects = 4;
 				$left 	= !strlen($_GET['p']) || $_GET['p'] == "1" ? $num_projects : $_GET['p']-1;
 				$right 	= $_GET['p'] == $num_projects ? "1" : $rightstart+1;
  				?>
-				<div class="slider" style="left:0;"><a id="left" href="?p=<?=$left?>">&lt;&lt;</a><a id="right" href="?p=<?=$right?>">&gt;&gt;</a></div>
+				<div class="slider" style="left:0;">
+                    <a id="left" href="?p=<?=$left?>"><i class="icon-arrow-left"></i></a>
+                    <a id="right" href="?p=<?=$right?>"><i class="icon-arrow-right"></i></a>
+                </div>
 				
 				
 

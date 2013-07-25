@@ -90,7 +90,6 @@
                 if (absoluteX > startX) {//left
 
                     posX = startX + e.touches[0].clientX - ((rememberCountContainer-1) * width);
-                    console.log("left swipe");
                     $self.each(function(){
                         $(this).css({
                             '-webkit-transition': 'all 0s ease-in-out',
@@ -106,7 +105,6 @@
 
                 }
                 if (absoluteX < startX) {//right
-                    console.log("right swipe");
                     posX = (-1)*(startX - e.touches[0].clientX + ((rememberCountContainer-1) * width));
 
                     $self.each(function(){

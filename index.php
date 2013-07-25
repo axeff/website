@@ -2,8 +2,10 @@
         
 <html>
 	<head>
-	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 		<title>Axel Freudiger &middot; Mediastudent</title>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/base.css" />
 		<script type="text/javascript" src="../js/jquery-1.4.1.min.js"></script>
 		<script type="text/javascript" src="./js/cufon-yui.js"></script>
@@ -107,19 +109,19 @@
 
 
 								<p>
-									<a target="_blank" href="http://github.com/axeff/">@ GitHub</a>
+                                    <i class="icon-github-sign"></i><a target="_blank" href="http://github.com/axeff/">GitHub</a>
 								</p>
 
 								<p>
-									<a target="_blank" href="http://plus.google.com/116432947050876633607/about">@ Google+</a>
+                                    <i class="icon-google-plus-sign"></i><a target="_blank" href="http://plus.google.com/116432947050876633607/about">Google+</a>
 								</p>
 
 								<p>
-									<a target="_blank" href="http://www.xing.com/profile/Axel_Freudiger">@ Xing</a>
+                                    <i class="icon-xing-sign"></i><a target="_blank" href="http://www.xing.com/profile/Axel_Freudiger">Xing</a>
 								</p>
 
 								<p>
-									<a target="_blank" href="http://www.linkedin.com/pub/axel-freudiger/33/b79/567">@ LinkedIn</a>
+                                    <i class="icon-linkedin-sign"></i><a target="_blank" href="http://www.linkedin.com/pub/axel-freudiger/33/b79/567">LinkedIn</a>
 								</p>
 
 						

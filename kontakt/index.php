@@ -19,7 +19,8 @@ if (is_array($data)){
         
 <html>
 	<head>
-	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<title>Axel Freudiger &middot; Mediastudent &middot; KONTAKT</title>
 		<link rel="stylesheet" type="text/css" href="../css/base.css" />
 		<script type="text/javascript" src="../js/jquery-1.4.1.min.js"></script>

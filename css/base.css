@@ -5,7 +5,7 @@
 body {
 background-color:#ffffff;
 background-repeat:no-repeat;
-color:#444444;
+color:#777777;
 font-family:"Trebuchet MS","Lucida Grande CE",Arial;
 font-size:13px;
 font-weight:100;
@@ -21,7 +21,7 @@ h1 {
 font-size:16px;
 font-weight:normal;
 line-height:18px;
-color:#444444;
+color:#999999;
 margin:2px 0;
 padding:0;
 }
@@ -34,7 +34,7 @@ margin:0 0 4px;
 padding:0;
 }
 h3 {
-color:#444444;
+color:#999999;
 font-size:14px;
 font-weight:normal;
 line-height:20px;
@@ -55,6 +55,11 @@ line-height:22px;
 margin:0 0 4px;
 padding:4px 0;
 }
+
+i {
+    margin-right: 1em;
+}
+
 .anmerkung p {
 color:#999999;
 font-size:10px;
@@ -172,12 +177,14 @@ margin:0;
 padding:8px 0 0;
 }
 .navi a {
-display:block;
-font-size:20px;
-line-height:24px;
-padding-right:8px;
-text-decoration:none;
-text-transform:uppercase;
+    display:block;
+    font-size:20px;
+    line-height:24px;
+    padding-right:8px;
+    text-decoration:none;
+    text-transform:uppercase;
+    color:#999999;
+    font-weight: normal;
 }
 
 
@@ -480,7 +487,6 @@ img.reflect, img.reflected {
 }
 
 #contact{
-	color:				#666666;
 	border:				1px solid #CCCCCC;
 	padding:			16px;
 	position:			relative;
@@ -528,10 +534,8 @@ img.reflect, img.reflected {
 /****************************************************/
 
 @media only screen
-/*and (min-width : 320px)
-and (max-width : 480px) {*/
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
+and (min-width : 320px)
+and (max-width : 480px) {
 
 
     body, .frame {
@@ -542,7 +546,14 @@ and (max-device-width : 480px) {
 
 
     h1 {
+        line-height: 1.5em;
         font-size: 1.5em;
+        color: #999;
+        border-top: 1px solid #999999;
+    }
+
+    h1:first-child {
+        border: none;
     }
 
     img {
@@ -554,24 +565,36 @@ and (max-device-width : 480px) {
     }
 
     .logo h1{
-        font-size: 3.5em !important;
+        font-size: 1em !important;
     }
 
     .magi {
         width: inherit;
         float: none;
-        /*position: fixed;*/
+        position: fixed;
         margin-bottom: 3em;
         margin-left: 0;
         height: auto;
+        background-color: white;
+        top: 0;
+        border-bottom: 1px solid #999999;
+        border-bottom-left-radius: 0.5em;
+        border-bottom-right-radius: 0.5em;
+        opacity: 0.9;
+        z-index: 10;
+    }
+
+    .magi .logo {
+        margin: 0;
     }
 
     .magi .navi {
-        height: auto;
+        height: inherit;
     }
 
     .navi a {
-        font-size: 5em;
+        font-size: 1.5em;
+        padding-bottom: 0.625em;
     }
 
     .magi .navi ul {
@@ -585,12 +608,10 @@ and (max-device-width : 480px) {
 
     }
 
-    .magi .navi li:first-child{
-        text-align: left;
-    }
-
-    .magi .navi li:last-child{
-        text-align: right;
+    .contentteaser {
+        top: 3em;
+        position: relative;
+        border: 0;
     }
 
     .contentteaser, .contentteaser .text{
@@ -608,6 +629,19 @@ and (max-device-width : 480px) {
         display: none;
     }
 
+    .contentteaser .text a {
+        font-size: 1em;
+        line-height: 0.75em;
+    }
+
+    .projects table img {
+        max-width: 100%;
+    }
+
+    .projects table {
+        width: 100%;
+    }
+
     .projects #projects_wrapper {
         width: inherit;
     }
@@ -616,9 +650,23 @@ and (max-device-width : 480px) {
         display: none;
     }
 
+    .projects #projects_wrapper .mask {
+        height: inherit;
+    }
+
     .projects .container td {
         display: block;
     }
+
+    .slider {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 10;
+        background-color: white;
+    }
+
+
 
 
     .contact #contact {
@@ -627,15 +675,17 @@ and (max-device-width : 480px) {
     }
 
     .contact #contact td {
-        width: 75% !important;
+        display: block;
     }
 
     .contact #contact td.left {
-        width: 25% !important;
+        text-align: left !important;
+        font-size: 0.75em;
+        width:  100% !important;
     }
 
     .contact #contact table, .contact #contact td input, .contact #contact td textarea {
-        width: inherit;
+        width: 100%;
     }
 
     .contact .title {
