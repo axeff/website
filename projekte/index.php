@@ -240,6 +240,13 @@ $num_projects = 4;
 		<!-- Ende Rahmen um alle Inhalte der Seite-->
         <script>
             $(document).ready(function(){
+
+                //set width for project containers to viewport width
+                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                    $('.container').width($(window).width());
+                }
+
+
                 $("#projects").uglaSlide({
                     left: $("#left"),
                     right: $("#right"),
