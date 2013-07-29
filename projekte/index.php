@@ -18,7 +18,7 @@ $num_projects = 4;
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script type="text/javascript" src="../js/cufon-yui.js"></script>
 		<script type="text/javascript" src="../js/DistrictThin_400.font.js"></script>
-		<!--<script type="text/javascript" src="../js/reflection.js"></script>-->
+		<<script type="text/javascript" src="../js/spin.min.js"></script>
 		<script type="text/javascript" src="../js/ugla-slider.js"></script>
 		<script>
 			Cufon.replace('.navi a, .magi h1');
@@ -137,7 +137,7 @@ $num_projects = 4;
 								<tr>
 									<td>
 										<a href="http://www.gosee.de/" target="_blank">
-                                            <img class="reflect rheight10 lazy" src="../img/loader.gif" data-original="projectpix/project2.jpg" />
+                                            <img class="reflect rheight10 lazy" data-original="projectpix/project2.jpg" />
                                         </a>
 									</td>
 									<td class="top">
@@ -162,7 +162,7 @@ $num_projects = 4;
 								<tr>
 									<td>
 										<a href="http://www.langer-blomqvist.de/" target="_blank">
-                                            <img class="reflect rheight10 lazy" src="../img/loader.gif" data-original="projectpix/project3.jpg" />
+                                            <img class="reflect rheight10 lazy" data-original="projectpix/project3.jpg" />
                                         </a>
 									</td>
 									<td class="top">
@@ -186,7 +186,7 @@ $num_projects = 4;
 								<tr>
 									<td>
 										<a href="http://www.harzi-werbung.de/" target="_blank">
-                                            <img class="reflect rheight10 lazy" src="../img/loader.gif" data-original="projectpix/project4.jpg" />
+                                            <img class="reflect rheight10 lazy" data-original="projectpix/project4.jpg" />
                                         </a>
 									</td>
 									<td class="top">
@@ -210,7 +210,7 @@ $num_projects = 4;
 								<tr>
 									<td>
 										<a href="http://www.mybeautycase.de/" target="_blank">
-                                            <img class="reflect rheight10 lazy" src="../img/loader.gif" data-original="projectpix/project5.jpg" />
+                                            <img class="reflect rheight10 lazy" data-original="projectpix/project5.jpg" />
                                         </a>
 									</td>
 									<td class="top">
@@ -251,6 +251,30 @@ $num_projects = 4;
         <script>
             $(document).ready(function(){
 
+                var opts = {
+                    lines: 13, // The number of lines to draw
+                    length: 20, // The length of each line
+                    width: 10, // The line thickness
+                    radius: 30, // The radius of the inner circle
+                    corners: 1, // Corner roundness (0..1)
+                    rotate: 0, // The rotation offset
+                    direction: 1, // 1: clockwise, -1: counterclockwise
+                    color: '#000', // #rgb or #rrggbb
+                    speed: 1, // Rounds per second
+                    trail: 60, // Afterglow percentage
+                    shadow: false, // Whether to render a shadow
+                    hwaccel: false, // Whether to use hardware acceleration
+                    className: 'spinner', // The CSS class to assign to the spinner
+                    zIndex: 2e9, // The z-index (defaults to 2000000000)
+                    top: '50%', // Top position relative to parent in px
+                    left: '50%' // Left position relative to parent in px
+                };
+                for (var i = 1; i<=5; i++){
+                    var target = $('.container')[i];
+                    var spinner = new Spinner(opts).spin(target);
+                }
+
+
                 //set width for project containers to viewport width
                 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
                     $('.container').width($(window).width());
@@ -268,10 +292,16 @@ $num_projects = 4;
 
                     //lazyload images
                     var nextActiveContainer = event.countContainer < 1 ? 5 : event.countContainer;
+
+                    //disable loader canvas
+                    $($('.container')[nextActiveContainer]).find('.spinner').remove();
+
+                    //load next active project-image
                     var $activeImg = $($('.container')[nextActiveContainer]).find("img");
                     if ($activeImg){
                         $activeImg.attr('src',$activeImg.data('original'));
                     }
+
 
                     var $active = $("#projectssubmenu li.active");
 
