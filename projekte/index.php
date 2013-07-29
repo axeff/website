@@ -20,6 +20,7 @@ $num_projects = 4;
 		<script type="text/javascript" src="../js/DistrictThin_400.font.js"></script>
 		<script type="text/javascript" src="../js/spin.min.js"></script>
 		<script type="text/javascript" src="../js/ugla-slider.js"></script>
+        <script type="text/javascript" src="../js/reflection.js"></script>
 		<script>
 			Cufon.replace('.navi a, .magi h1');
 		</script>	
@@ -109,7 +110,7 @@ $num_projects = 4;
 								<tr>
 									<td>
 										<a href="http://itunes.apple.com/de/app/edarling-partnersuche/id493256673?mt=8" target="_blank">
-                                            <img class="reflect rheight10 lazy" src="projectpix/project1.jpg"/>
+                                            <img class="reflect rheight10" src="projectpix/project1.jpg"/>
                                         </a>
 									</td>
 									<td class="top">
@@ -137,7 +138,7 @@ $num_projects = 4;
 								<tr>
 									<td>
 										<a href="http://www.gosee.de/" target="_blank">
-                                            <img class="reflect rheight10 lazy" data-original="projectpix/project2.jpg" />
+                                            <img class="rheight10" data-original="projectpix/project2.jpg" />
                                         </a>
 									</td>
 									<td class="top">
@@ -162,7 +163,7 @@ $num_projects = 4;
 								<tr>
 									<td>
 										<a href="http://www.langer-blomqvist.de/" target="_blank">
-                                            <img class="reflect rheight10 lazy" data-original="projectpix/project3.jpg" />
+                                            <img class="rheight10" data-original="projectpix/project3.jpg" />
                                         </a>
 									</td>
 									<td class="top">
@@ -186,7 +187,7 @@ $num_projects = 4;
 								<tr>
 									<td>
 										<a href="http://www.harzi-werbung.de/" target="_blank">
-                                            <img class="reflect rheight10 lazy" data-original="projectpix/project4.jpg" />
+                                            <img class="rheight10" data-original="projectpix/project4.jpg" />
                                         </a>
 									</td>
 									<td class="top">
@@ -210,7 +211,7 @@ $num_projects = 4;
 								<tr>
 									<td>
 										<a href="http://www.mybeautycase.de/" target="_blank">
-                                            <img class="reflect rheight10 lazy" data-original="projectpix/project5.jpg" />
+                                            <img class="rheight10" data-original="projectpix/project5.jpg" />
                                         </a>
 									</td>
 									<td class="top">
@@ -302,6 +303,11 @@ $num_projects = 4;
                         $activeImg.attr('src',$activeImg.data('original'));
                     }
 
+                    //reflect just loaded image
+                    var imgToReflect = $($('.container')[nextActiveContainer]).find("img:not(.reflected)")[0];
+                    if (imgToReflect) {
+                        Reflection.add(imgToReflect, {height: 0.1});
+                    }
 
                     var $active = $("#projectssubmenu li.active");
 

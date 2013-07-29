@@ -483,6 +483,10 @@ width:90px;
 	text-transform:		uppercase;
 }
 
+.container a > div {
+    width: 300px;
+}
+
 img.reflect, img.reflected {
     width: 300px;
 }
