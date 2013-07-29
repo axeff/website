@@ -15,10 +15,10 @@ $num_projects = 4;
 		<title>Axel Freudiger &middot; Mediastudent &middot; PROJEKTE</title>
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="../css/base.css" />
-		<script type="text/javascript" src="../js/jquery-1.4.1.min.js"></script>
-		<script type="text/javascript" src="../js/cufon-yui.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/cufon-yui.js"></script>
 		<script type="text/javascript" src="../js/DistrictThin_400.font.js"></script>
-		<script type="text/javascript" src="../js/reflection.js"></script>
+		<!--<script type="text/javascript" src="../js/reflection.js"></script>-->
 		<script type="text/javascript" src="../js/ugla-slider.js"></script>
 		<script>
 			Cufon.replace('.navi a, .magi h1');
@@ -108,7 +108,9 @@ $num_projects = 4;
 							<table>
 								<tr>
 									<td>
-										<a href="http://itunes.apple.com/de/app/edarling-partnersuche/id493256673?mt=8" target="_blank"><img class="reflect rheight10" src="projectpix/project1.jpg" />	</a>
+										<a href="http://itunes.apple.com/de/app/edarling-partnersuche/id493256673?mt=8" target="_blank">
+                                            <img class="reflect rheight10 lazy" src="projectpix/project1.jpg"/>
+                                        </a>
 									</td>
 									<td class="top">
 										<h3>eDarling/BetterDate (heute: Shop A Man)</h3>
@@ -134,7 +136,9 @@ $num_projects = 4;
 							<table>
 								<tr>
 									<td>
-										<a href="http://www.gosee.de/" target="_blank"><img class="reflect rheight10" src="projectpix/project2.jpg" />	</a>
+										<a href="http://www.gosee.de/" target="_blank">
+                                            <img class="reflect rheight10 lazy" src="../img/loader.gif" data-original="projectpix/project2.jpg" />
+                                        </a>
 									</td>
 									<td class="top">
 										<h3>PR-Agentur GoSee (www.gosee.de)</h3>
@@ -157,7 +161,9 @@ $num_projects = 4;
 							<table>
 								<tr>
 									<td>
-										<a href="http://www.langer-blomqvist.de/" target="_blank"><img class="reflect rheight10" src="projectpix/project3.jpg" />	</a>
+										<a href="http://www.langer-blomqvist.de/" target="_blank">
+                                            <img class="reflect rheight10 lazy" src="../img/loader.gif" data-original="projectpix/project3.jpg" />
+                                        </a>
 									</td>
 									<td class="top">
 										<h3>Buchhandel (www.langer-blomqvist.de)</h3>
@@ -174,12 +180,14 @@ $num_projects = 4;
 						</div>
 						<?}?>
 						<?if ((strlen($_GET['p']) && $_GET['p'] == "4") || !strlen($_GET['p'])){?>
-						
+
 						  <div class="container">
 							<table>
 								<tr>
 									<td>
-										<a href="http://www.harzi-werbung.de/" target="_blank"><img class="reflect rheight10" src="projectpix/project4.jpg" />	</a>
+										<a href="http://www.harzi-werbung.de/" target="_blank">
+                                            <img class="reflect rheight10 lazy" src="../img/loader.gif" data-original="projectpix/project4.jpg" />
+                                        </a>
 									</td>
 									<td class="top">
 										<h3>Werbetechnik Harzendorf (www.harzi-werbung.de)</h3>
@@ -201,7 +209,9 @@ $num_projects = 4;
 							<table>
 								<tr>
 									<td>
-										<a href="http://www.mybeautycase.de/" target="_blank"><img class="reflect rheight10" src="projectpix/project5.jpg" />	</a>
+										<a href="http://www.mybeautycase.de/" target="_blank">
+                                            <img class="reflect rheight10 lazy" src="../img/loader.gif" data-original="projectpix/project5.jpg" />
+                                        </a>
 									</td>
 									<td class="top">
 										<h3>goFeminin (www.mybeautycase.de)</h3>
@@ -250,12 +260,21 @@ $num_projects = 4;
                 $("#projects").uglaSlide({
                     left: $("#left"),
                     right: $("#right"),
-                    speed: "0.5s",
+                    speed: "0.5s"
                 });
 
                 $(document).bind("uglaSlide", function(event){
 
+
+                    //lazyload images
+                    var nextActiveContainer = event.countContainer < 1 ? 5 : event.countContainer;
+                    var $activeImg = $($('.container')[nextActiveContainer]).find("img");
+                    if ($activeImg){
+                        $activeImg.attr('src',$activeImg.data('original'));
+                    }
+
                     var $active = $("#projectssubmenu li.active");
+
                     if (event.direction == 'left'){
 
                         if (!$active.prev().length){

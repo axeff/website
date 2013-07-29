@@ -152,7 +152,8 @@
             //trigger event
             $.event.trigger({
                 type: "uglaSlide",
-                direction: direction
+                direction: direction,
+                countContainer: countContainer
             });
 
             if (typeof getOffsetPosition == "undefined") getOffsetPosition = true;
@@ -185,7 +186,7 @@
                     pos = eval(pos + $(this).find('.container').outerWidth());
                     if (pos > 0) {
                         pos = eval(0-eval(eval($(this).find('.container').length - 1) *$(this).find('.container').outerWidth()));
-                        countContainer = 4;
+                        countContainer = 5;
                     }else{
                         countContainer -= 1;
                     }
