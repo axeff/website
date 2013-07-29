@@ -18,7 +18,7 @@ $num_projects = 4;
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script type="text/javascript" src="../js/cufon-yui.js"></script>
 		<script type="text/javascript" src="../js/DistrictThin_400.font.js"></script>
-		<<script type="text/javascript" src="../js/spin.min.js"></script>
+		<script type="text/javascript" src="../js/spin.min.js"></script>
 		<script type="text/javascript" src="../js/ugla-slider.js"></script>
 		<script>
 			Cufon.replace('.navi a, .magi h1');
